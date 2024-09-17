@@ -1,0 +1,202 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400 700;
+  -webkit-font-feature-settings: "clig" off, "liga" off;
+  font-feature-settings: "clig" off, "liga" off;
+}
+@font-face {
+  font-family: "Actay";
+  src: url("../fonts/Actay-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Actay Wide";
+  src: url("../fonts/ActayWide-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: 700;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #000;
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+@media screen and (max-width: 767.98px) {
+  body {
+    font-size: 1.25rem;
+  }
+}
+
+.container {
+  max-width: 77rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+@media screen and (max-width: 767.98px) {
+  .container {
+    padding: 0 2.25rem;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  -ms-grid-rows: auto 0px 1fr 0px auto;
+  grid-template-rows: auto 1fr auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-height: 100vh;
+}
+
+.content > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.content > *:nth-child(2) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.content > *:nth-child(3) {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+}
+
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+  letter-spacing: 0.5px;
+  letter-spacing: 0;
+}
+
+.main {
+  overflow-x: hidden;
+}
