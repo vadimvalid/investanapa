@@ -294,6 +294,7 @@
           .icon {
             width: torem(78);
             height: torem(78);
+            padding: torem(14);
             border-radius: 27px;
             box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
           }
@@ -542,6 +543,7 @@
       .icon {
         width: torem(78);
         height: torem(78);
+        padding: torem(14);
         border-radius: 27px;
         box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
       }
@@ -671,6 +673,7 @@
       .icon {
         width: torem(78);
         height: torem(78);
+        padding: torem(14);
         border-radius: 27px;
         box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
       }
@@ -727,8 +730,6 @@
     }
 
     picture {
-      aspect-ratio: 16/9;
-
       img {
         height: 100%;
       }
@@ -739,11 +740,25 @@
       line-height: 1.4;
 
       .title {
+        display: flex;
+        align-items: center;
+        gap: torem(20);
         margin-bottom: torem(12);
         font-family: "Actay Wide", sans-serif;
         font-size: torem(32);
         font-weight: 700;
         line-height: 1.4;
+
+        .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: torem(100);
+          height: torem(100);
+          border-radius: 35px;
+          background: $white;
+          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.05);
+        }
       }
 
       p {
@@ -780,8 +795,17 @@
 
       &__text {
         .title {
+          gap: torem(10);
           margin-bottom: torem(10);
           font-size: torem(20);
+
+          .icon {
+            width: torem(78);
+            height: torem(78);
+            padding: torem(14);
+            border-radius: 27px;
+            box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
+          }
         }
 
         p {
@@ -791,12 +815,167 @@
         }
       }
 
-      picture,
-      img {
+      picture {
+        aspect-ratio: 16/9;
       }
 
       &.reverse {
         flex-direction: column-reverse;
+      }
+    }
+  }
+
+  &--icon {
+    padding: torem(114) 0 torem(80);
+    border-radius: 80px;
+    background: $whiteDarken;
+
+    h2 {
+      margin-bottom: torem(68);
+    }
+
+    @include sm-breakpoint {
+      padding: torem(30) 0 torem(35);
+      border-radius: 30px;
+
+      h2 {
+        margin-bottom: torem(28);
+      }
+    }
+  }
+}
+
+.section--priority {
+  padding-bottom: torem(160);
+
+  h2 {
+    margin-bottom: torem(76);
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 clamp(torem(10), 2.5vw, torem(80));
+    gap: clamp(torem(20), 3vw, torem(120));
+  }
+
+  &__item {
+    &:first-child {
+      min-width: torem(140);
+
+      img {
+        height: auto;
+      }
+    }
+
+    &:last-child {
+      flex: 1;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: repeat(3, auto);
+      justify-content: end;
+      align-items: center;
+      align-content: center;
+      gap: torem(23) torem(50);
+      font-size: torem(24);
+
+      span {
+        font-size: torem(28);
+        font-weight: 700;
+      }
+
+      .item {
+        position: relative;
+        padding-left: torem(53);
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          width: torem(33);
+          height: torem(33);
+          background: $blue;
+          border-radius: 10px;
+          transform: translateY(-50%);
+        }
+
+        &:nth-child(2) {
+          &:before {
+            background: $pink;
+          }
+        }
+
+        &:nth-child(3) {
+          &:before {
+            background: #00a056;
+          }
+        }
+
+        &:nth-child(4) {
+          &:before {
+            background: #564793;
+          }
+        }
+
+        &:nth-child(5) {
+          &:before {
+            background: #ffac21;
+          }
+        }
+
+        &:nth-child(6) {
+          &:before {
+            background: #e4f0fa;
+          }
+        }
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    padding-bottom: torem(30);
+
+    h2 {
+      margin-bottom: torem(25);
+    }
+
+    &__items {
+      flex-direction: column;
+      padding: 0;
+      gap: torem(30);
+    }
+
+    &__item {
+      &:first-child {
+        min-width: torem(140);
+
+        img {
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+
+      &:last-child {
+        grid-template-columns: 1fr;
+        align-items: center;
+        align-content: center;
+        gap: torem(12);
+        font-size: torem(14);
+
+        span {
+          font-size: torem(16);
+        }
+
+        .item {
+          padding-left: torem(32);
+
+          &:before {
+            width: torem(20);
+            height: torem(20);
+            border-radius: 6px;
+          }
+        }
       }
     }
   }
