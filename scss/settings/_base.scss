@@ -15,14 +15,10 @@ body {
 }
 
 .container {
-  max-width: torem(1232);
+  max-width: torem(1740);
   width: 100%;
   margin: 0 auto;
-  padding: 0 torem(15);
-
-  @include sm-breakpoint {
-    padding: 0 torem(36);
-  }
+  padding: 0 torem(10);
 }
 
 a {

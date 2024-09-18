@@ -130,15 +130,10 @@ body {
 }
 
 .container {
-  max-width: 77rem;
+  max-width: 108.75rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0.9375rem;
-}
-@media screen and (max-width: 767.98px) {
-  .container {
-    padding: 0 2.25rem;
-  }
+  padding: 0 0.625rem;
 }
 
 a {
@@ -199,4 +194,138 @@ h5 {
 
 .main {
   overflow-x: hidden;
+}
+
+.main {
+  position: relative;
+}
+.main__header {
+  position: absolute;
+  top: 3.125rem;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+  width: 100%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.main__header__title {
+  font-family: "Actay Wide", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+.main__header__title > p:first-child {
+  font-size: 28px;
+}
+@media screen and (max-width: 767.98px) {
+  .main__header {
+    top: 0.625rem;
+    gap: 0.4375rem;
+    width: calc(100% - 1.25rem);
+  }
+  .main__header > img {
+    width: 1.6875rem;
+    height: 2.125rem;
+  }
+  .main__header__title {
+    font-size: 9px;
+  }
+  .main__header__title > p:first-child {
+    font-size: 14px;
+  }
+}
+
+.splide {
+  height: 100vh;
+}
+.splide__track {
+  height: 100%;
+}
+.splide__slide {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.splide__slide picture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.splide__slide img {
+  width: 100%;
+  height: 100%;
+}
+.splide__slide__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  padding: 0 10vw 9.375rem 6.25rem;
+  z-index: 10;
+}
+.splide__slide__content > img {
+  width: 4.5rem;
+  height: 4.5rem;
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+.splide__slide__content__title {
+  font-family: "Actay", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  text-transform: uppercase;
+}
+.splide__slide__content__title > p:first-child {
+  font-family: "Actay Wide", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 767.98px) {
+  .splide__slide__content {
+    gap: 0.75rem;
+    padding: 0 0.625rem 3.4375rem 0.625rem;
+  }
+  .splide__slide__content > img {
+    width: 1.6875rem;
+    height: 1.6875rem;
+  }
+  .splide__slide__content__title {
+    font-size: 24px;
+  }
+  .splide__slide__content__title > p:first-child {
+    font-size: 1.6875rem;
+  }
+}
+.splide__pagination {
+  bottom: 4.0625rem;
+  gap: 0.625rem;
+}
+.splide__pagination__page {
+  width: 0.75rem;
+  height: 0.75rem;
+  margin: 0;
+  opacity: 1;
+  background: transparent;
+  border: 3px solid #fff;
+}
+.splide__pagination__page.is-active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  opacity: 1;
+}
+@media screen and (max-width: 767.98px) {
+  .splide__pagination {
+    bottom: 1.25rem;
+    gap: 0.5rem;
+  }
 }

@@ -10,7 +10,7 @@
 МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="./css/splide.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
     <title>Investanapa.ru</title>
 
@@ -18,44 +18,142 @@
   </head>
   <body>
     <header class="header"></header>
-    <main class="main"></main>
-    <footer class="footer">
-      <div class="container-fluid">
-        <div class="footer__top">
-          <div class="item">
-            <p>12385</p>
-            <p>человек уже знают</p>
-          </div>
-          <div class="item">
-            <p>
-              Использованные изображения не являются изображениями реальных
-              пациентов
-            </p>
-            <p>11211039/Val+Sac/Dig/06.24/0</p>
+    <main class="main">
+      <a href="/" class="main__header">
+        <img src="./images/icons/logo.svg" alt="logo" />
+        <div class="main__header__title">
+          <p>ИНВЕСТИЦИОННЫЙ ПОТЕНЦИАЛ</p>
+          <p>ГОРОДА-КУРОРТА АНАПА КРАСНОДАРСКОГО КРАЯ</p>
+        </div>
+      </a>
+      <section
+        id="image-carousel"
+        class="splide"
+        aria-label="Basic Structure Example"
+      >
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="splide__slide">
+              <div class="splide__slide__content">
+                <img
+                  src="./images/icons/slide-1.svg"
+                  alt="Анапа"
+                  width="72"
+                  height="72"
+                />
+                <div class="splide__slide__content__title">
+                  <p>Анапа – это</p>
+                  <p>исключительное разнообразие природных ресурсов</p>
+                </div>
+              </div>
+              <picture class="item__picture">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/hero/hero-1.webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/hero/hero-1-mobile.webp"
+                />
+                <img
+                  src="./images/hero/hero-1.jpg"
+                  alt="Анапа"
+                  loading="lazy"
+                  decoding="async"
+                  width="1920"
+                  height="1080"
+                />
+              </picture>
+            </div>
+            <div class="splide__slide">
+              <div class="splide__slide__content">
+                <img
+                  src="./images/icons/slide-2.svg"
+                  alt="Анапа"
+                  width="72"
+                  height="72"
+                />
+                <div class="splide__slide__content__title">
+                  <p>Анапа – это</p>
+                  <p>винная столица</p>
+                </div>
+              </div>
+              <picture class="item__picture">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/hero/hero-2.webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/hero/hero-2-mobile.webp"
+                />
+                <img
+                  src="./images/hero/hero-2.jpg"
+                  alt="Анапа"
+                  loading="lazy"
+                  decoding="async"
+                  width="1920"
+                  height="1080"
+                />
+              </picture>
+            </div>
+            <div class="splide__slide">
+              <div class="splide__slide__content">
+                <img
+                  src="./images/icons/slide-3.svg"
+                  alt="Анапа"
+                  width="72"
+                  height="72"
+                />
+                <div class="splide__slide__content__title">
+                  <p>Анапа – это</p>
+                  <p>город развитого туризма</p>
+                </div>
+              </div>
+              <picture class="item__picture">
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/hero/hero-3.webp"
+                />
+                <source
+                  media="(max-width: 767.98px)"
+                  srcset="./images/hero/hero-3-mobile.webp"
+                />
+                <img
+                  src="./images/hero/hero-3.jpg"
+                  alt="Анапа"
+                  loading="lazy"
+                  decoding="async"
+                  width="1920"
+                  height="1080"
+                />
+              </picture>
+            </div>
           </div>
         </div>
-        <div class="footer__bottom">
-          <p>
-            Данный материал не является рекомендацией к лечению и не подменяет
-            собой консультацию специалиста. Для получения квалифицированной
-            медицинской консультации или помощи обратитесь к своему лечащему
-            врачу. Для распространения на территории РФ. Материал подготовлен
-            при финансовой поддержке ООО «Новартис Фарма».
-          </p>
-          <p>
-            ООО «Новартис Фарма» Ленинградский проспект, д. 70 Москва, 125315
-            Россия. Тел:
-            <a href="tel:+7 (495) 967 12 70">+7 (495) 967 12 70</a> Факс: +7
-            (495) 967 12 68
-            <a
-              href="https://novartis.com"
-              class="footer__bottom__link"
-              target="_blank"
-              >www.novartis.com</a
-            >
-          </p>
+      </section>
+      <section class="section section--hero">
+        <div class="container">
+          <h1>ИНВЕСТИЦИОННЫЙ ПРОФИЛЬ МУНИЦИПАЛЬНОГО ОБРАЗОВАНИЯ</h1>
+          <a href="#" class="button">Инвестиционные данные</a>
+          <h2>Транспортная инфраструктура</h2>
+          <div class="section--hero__content">
+            <div class="section--hero__content__left">
+              <div class="section--hero__content__left__square">
+                <div class="icon">
+                  <img src="./images/icons/blue-1.svg" alt="площадь" />
+                </div>
+                <p>981,9 км2</p>
+                <p>площадь района</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+      </section>
+    </main>
+    <footer class="footer"></footer>
+
+    <script src="./js/splide.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
