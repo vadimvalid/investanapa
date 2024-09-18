@@ -79,13 +79,25 @@ h2 {
   font-family: "Actay Wide", sans-serif;
   font-size: 64px;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1;
   color: $black;
   text-align: center;
   text-transform: uppercase;
 
   @include md-breakpoint {
     font-size: torem(24);
+  }
+}
+
+h3 {
+  font-size: torem(48);
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: $black;
+
+  @include md-breakpoint {
+    font-size: torem(20);
   }
 }
 
@@ -102,6 +114,18 @@ h2 {
 
   @include md-breakpoint {
     padding: torem(13) torem(40);
+    font-size: torem(18);
+  }
+}
+
+sup {
+  position: relative;
+  top: -5px;
+  font-size: torem(24);
+  font-weight: 700;
+
+  @include sm-breakpoint {
+    top: 0;
     font-size: torem(18);
   }
 }
