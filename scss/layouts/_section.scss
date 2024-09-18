@@ -352,6 +352,7 @@
 
     picture,
     img {
+      flex-shrink: 0;
       width: torem(165);
       height: torem(165);
     }
@@ -373,6 +374,95 @@
       img {
         width: torem(87);
         height: torem(87);
+      }
+    }
+  }
+}
+
+.climate {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: torem(25) torem(20);
+
+    @include sm-breakpoint {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: clamp(torem(10), 2vw, torem(65));
+    padding: torem(50) clamp(torem(50), 3vw, torem(90)) torem(50)
+      clamp(torem(10), 2vw, torem(35));
+    border-radius: 30px;
+    background-color: $whiteDarken;
+
+    img {
+      width: torem(80);
+      height: torem(80);
+    }
+
+    &__text {
+      font-size: torem(16);
+      line-height: 1.4;
+
+      p {
+        &:first-child {
+          font-size: torem(20);
+          font-weight: 700;
+        }
+      }
+    }
+
+    @include md-breakpoint {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: torem(26);
+      padding: torem(16) torem(20) torem(20);
+
+      img {
+        width: torem(52);
+        height: torem(52);
+      }
+    }
+  }
+}
+
+.section--resources {
+  &__item {
+    margin-bottom: torem(70);
+
+    @include sm-breakpoint {
+      margin-bottom: torem(44);
+    }
+
+    h3 {
+      position: relative;
+      padding: torem(77) 0;
+      text-align: center;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/climate-title.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: translateX(-50%);
+      }
+
+      @include md-breakpoint {
+        padding: torem(25) 0;
+
+        &:before {
+          display: none;
+        }
       }
     }
   }
