@@ -27,6 +27,27 @@
         }
       }
     }
+
+    @include sm-breakpoint {
+      top: torem(10);
+      gap: torem(7);
+      width: calc(100% - torem(20));
+
+      > img {
+        width: torem(27);
+        height: torem(34);
+      }
+
+      &__title {
+        font-size: 9px;
+
+        > p {
+          &:first-child {
+            font-size: 14px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -80,10 +101,55 @@
         > p {
           &:first-child {
             font-family: "Actay Wide", sans-serif;
+            font-size: torem(72);
             font-weight: 700;
           }
         }
       }
+
+      @include sm-breakpoint {
+        gap: torem(12);
+        padding: 0 torem(10) torem(55) torem(10);
+
+        > img {
+          width: torem(27);
+          height: torem(27);
+        }
+
+        &__title {
+          font-size: 24px;
+
+          > p {
+            &:first-child {
+              font-size: torem(27);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    bottom: torem(65);
+    gap: torem(10);
+
+    &__page {
+      width: torem(12);
+      height: torem(12);
+      margin: 0;
+      opacity: 1;
+      background: transparent;
+      border: 3px solid $white;
+
+      &.is-active {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @include sm-breakpoint {
+      bottom: torem(20);
+      gap: torem(8);
     }
   }
 }
