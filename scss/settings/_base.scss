@@ -117,3 +117,15 @@ h3 {
     font-size: torem(18);
   }
 }
+
+sup {
+  position: relative;
+  top: -5px;
+  font-size: torem(24);
+  font-weight: 700;
+
+  @include sm-breakpoint {
+    top: 0;
+    font-size: torem(18);
+  }
+}
