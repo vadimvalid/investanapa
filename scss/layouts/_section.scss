@@ -766,6 +766,17 @@
           margin-bottom: torem(16);
         }
       }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: torem(5);
+        padding-left: torem(20);
+
+        li {
+          list-style-type: disc;
+        }
+      }
     }
 
     &.reverse {
@@ -975,6 +986,97 @@
             height: torem(20);
             border-radius: 6px;
           }
+        }
+      }
+    }
+  }
+}
+
+.section--list {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: torem(20);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: torem(40);
+    padding: torem(40) torem(42);
+    border-radius: 30px;
+    background: $whiteDarken;
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: torem(46);
+
+      .title {
+        font-size: torem(16);
+        font-weight: 700;
+        line-height: 1.4;
+
+        p {
+          &:last-child {
+            font-size: torem(20);
+          }
+        }
+      }
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: torem(100);
+        height: torem(100);
+        padding: torem(20);
+        border-radius: 35px;
+        background: $white;
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.05);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: torem(8);
+      padding-left: torem(20);
+      font-size: torem(14);
+
+      li {
+        list-style-type: disc;
+      }
+    }
+  }
+
+  @include sm-breakpoint {
+    &__items {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      gap: torem(20);
+      padding: torem(16) torem(15) torem(24);
+      border-radius: 30px;
+
+      &__title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: torem(20);
+
+        .icon {
+          width: torem(78);
+          height: torem(78);
+          padding: torem(14);
+          border-radius: 27px;
+          box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
         }
       }
     }
