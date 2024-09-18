@@ -456,6 +456,7 @@
         background-size: contain;
         background-position: center;
         transform: translateX(-50%);
+        z-index: -1;
       }
 
       @include md-breakpoint {
@@ -475,6 +476,7 @@
       h3 {
         &:before {
           background-image: url("../images/resources-title.png");
+          z-index: -1;
         }
       }
 
@@ -1079,6 +1081,165 @@
           box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
         }
       }
+    }
+  }
+}
+.section--cards {
+  h3 {
+    position: relative;
+    padding: torem(77) 0;
+    text-align: center;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/factory-title.png");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    @include md-breakpoint {
+      padding: torem(25) 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: torem(76);
+    margin-bottom: torem(56);
+    padding: torem(62) torem(54) torem(52);
+    border-radius: 50px;
+    background: $whiteDarken;
+
+    h4 {
+      font-size: torem(36);
+      font-weight: 700;
+      color: $black;
+      line-height: 1;
+      text-align: center;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include sm-breakpoint {
+      gap: torem(26);
+      margin-bottom: torem(30);
+      padding: torem(24) torem(20);
+      border-radius: 30px;
+
+      h4 {
+        font-size: torem(18);
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: torem(24) clamp(torem(10), 2vw, torem(70));
+
+  @include md-breakpoint {
+    grid-template-columns: 1fr;
+    gap: torem(38);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: torem(10);
+  padding: torem(12) torem(12) torem(25);
+  border-radius: 30px;
+  background: $white;
+  font-size: torem(16);
+  line-height: 1.4;
+
+  &__picture {
+    aspect-ratio: 4/3;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  > p {
+    padding: 0 torem(12);
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0 torem(12);
+    font-size: torem(18);
+    font-weight: 700;
+    line-height: 1.4;
+    color: $black;
+  }
+
+  a {
+    padding: 0 torem(12);
+    color: $black;
+    text-decoration: none;
+  }
+
+  @include sm-breakpoint {
+    gap: torem(8);
+    padding: torem(12) 0 torem(25);
+    font-size: torem(12);
+
+    > p {
+      padding: 0 torem(15);
+    }
+
+    &__title {
+      padding: 0 torem(15);
+      font-size: torem(14);
+    }
+
+    a {
+      padding: 0 torem(15);
+    }
+  }
+}
+
+.section--infrastructure {
+  h2 {
+    margin-bottom: torem(55);
+  }
+
+  .cards {
+    padding: torem(25) torem(55) torem(55);
+    border-radius: 50px;
+    background-color: $whiteDarken;
+  }
+
+  @include sm-breakpoint {
+    h2 {
+      margin-bottom: torem(22);
+    }
+
+    .cards {
+      padding: torem(12) torem(18) torem(12);
+      border-radius: 30px;
     }
   }
 }

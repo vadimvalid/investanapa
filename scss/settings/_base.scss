@@ -58,7 +58,12 @@ h5 {
 }
 
 .main {
+  padding-bottom: torem(132);
   overflow-x: hidden;
+
+  @include sm-breakpoint {
+    padding-bottom: torem(36);
+  }
 }
 
 h1 {
