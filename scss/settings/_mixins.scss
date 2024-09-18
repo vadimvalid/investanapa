@@ -9,6 +9,12 @@
   }
 }
 
+@mixin md-breakpoint {
+  @media screen and (max-width: $mdBreakpoint) {
+    @content;
+  }
+}
+
 @mixin visually-hidden {
   position: absolute;
   width: 1px;
