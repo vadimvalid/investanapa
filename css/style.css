@@ -691,6 +691,7 @@ sup {
   }
 }
 .section--resources__item:last-of-type {
+  position: relative;
   padding: 1.625rem 2.25rem 5.75rem;
   border-radius: 50px;
   background: #f8fcff;
@@ -698,6 +699,26 @@ sup {
 .section--resources__item:last-of-type h3:before {
   background-image: url("../images/resources-title.png");
   z-index: -1;
+}
+.section--resources__item:last-of-type:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 22%;
+  height: 34%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(-8%, 30%);
+  transform: translate(-8%, 30%);
+  z-index: -1;
+}
+@media screen and (max-width: 991.98px) {
+  .section--resources__item:last-of-type:after {
+    display: none;
+  }
 }
 @media screen and (max-width: 991.98px) {
   .section--resources__item:last-of-type {
@@ -1013,6 +1034,73 @@ sup {
     margin-bottom: 1.75rem;
   }
 }
+.section--recreatiion--icon .container {
+  position: static;
+}
+.section--recreatiion--icon .container .section--recreatiion__items {
+  position: relative;
+}
+.section--recreatiion--icon .container .section--recreatiion__items:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22%;
+  height: 14%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(65%, 70%);
+  transform: translate(65%, 70%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--recreatiion--icon .container .section--recreatiion__items:after {
+    display: none;
+  }
+}
+.section--recreatiion .container {
+  position: relative;
+}
+.section--recreatiion .container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url("../images/ellipse-1-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(-35%, -35%);
+  transform: translate(-35%, -35%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--recreatiion .container:before {
+    display: none;
+  }
+}
+.section--recreatiion .container:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 22%;
+  height: 24%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(8%, 52%);
+  transform: translate(8%, 52%);
+  z-index: -1;
+}
+@media screen and (max-width: 991.98px) {
+  .section--recreatiion .container:after {
+    display: none;
+  }
+}
 
 .section--priority {
   padding-bottom: 10rem;
@@ -1223,6 +1311,29 @@ sup {
     box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.05);
   }
 }
+.section--list .container {
+  position: relative;
+}
+.section--list .container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22%;
+  height: 33%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(-17%, -30%);
+  transform: translate(-17%, -30%);
+  z-index: -1;
+}
+@media screen and (max-width: 991.98px) {
+  .section--list .container:after {
+    display: none;
+  }
+}
 
 .section--cards h3 {
   position: relative;
@@ -1283,6 +1394,69 @@ sup {
   }
   .section--cards__item:last-of-type {
     margin-bottom: 0;
+  }
+}
+.section--cards__item:nth-child(4) {
+  position: relative;
+}
+.section--cards__item:nth-child(4):after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22%;
+  height: 31%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(16%, -64%);
+  transform: translate(16%, -64%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--cards__item:nth-child(4):after {
+    display: none;
+  }
+}
+.section--cards .container {
+  position: relative;
+}
+.section--cards .container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: url("../images/ellipse-2-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(-30%, -40%);
+  transform: translate(-30%, -40%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--cards .container:before {
+    display: none;
+  }
+}
+.section--cards .container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22%;
+  height: 8%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(16%, -64%);
+  transform: translate(16%, -64%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--cards .container:after {
+    display: none;
   }
 }
 
@@ -1367,5 +1541,49 @@ sup {
   .section--infrastructure .cards {
     padding: 0.75rem 1.125rem 0.75rem;
     border-radius: 30px;
+  }
+}
+.section--infrastructure .container {
+  position: relative;
+}
+.section--infrastructure .container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22%;
+  height: 70%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transform: translate(75%, -20%);
+  transform: translate(75%, -20%);
+}
+@media screen and (max-width: 991.98px) {
+  .section--infrastructure .container:after {
+    display: none;
+  }
+}
+
+.section--resources .container {
+  position: relative;
+}
+.section--resources .container:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 22%;
+  background-image: url("../images/dot-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+@media screen and (max-width: 991.98px) {
+  .section--resources .container:after {
+    display: none;
   }
 }

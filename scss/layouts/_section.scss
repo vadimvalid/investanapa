@@ -469,6 +469,7 @@
     }
 
     &:last-of-type {
+      position: relative;
       padding: torem(26) torem(36) torem(92);
       border-radius: 50px;
       background: $whiteDarken;
@@ -477,6 +478,25 @@
         &:before {
           background-image: url("../images/resources-title.png");
           z-index: -1;
+        }
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 22%;
+        height: 34%;
+        background-image: url("../images/dot-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: translate(-8%, 30%);
+        z-index: -1;
+
+        @include md-breakpoint {
+          display: none;
         }
       }
 
@@ -855,6 +875,73 @@
         margin-bottom: torem(28);
       }
     }
+
+    .container {
+      position: static;
+
+      .section--recreatiion__items {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 22%;
+          height: 14%;
+          background-image: url("../images/dot-bg.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          transform: translate(65%, 70%);
+
+          @include md-breakpoint {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background-image: url("../images/ellipse-1-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translate(-35%, -35%);
+
+      @include md-breakpoint {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 22%;
+      height: 24%;
+      background-image: url("../images/dot-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translate(8%, 52%);
+      z-index: -1;
+
+      @include md-breakpoint {
+        display: none;
+      }
+    }
   }
 }
 
@@ -1083,6 +1170,29 @@
       }
     }
   }
+
+  .container {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22%;
+      height: 33%;
+      background-image: url("../images/dot-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translate(-17%, -30%);
+      z-index: -1;
+
+      @include md-breakpoint {
+        display: none;
+      }
+    }
+  }
 }
 .section--cards {
   h3 {
@@ -1147,6 +1257,68 @@
 
       &:last-of-type {
         margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(4) {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 22%;
+        height: 31%;
+        background-image: url("../images/dot-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: translate(16%, -64%);
+
+        @include md-breakpoint {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .container {
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background-image: url("../images/ellipse-2-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translate(-30%, -40%);
+
+      @include md-breakpoint {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22%;
+      height: 8%;
+      background-image: url("../images/dot-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translate(16%, -64%);
+
+      @include md-breakpoint {
+        display: none;
       }
     }
   }
@@ -1240,6 +1412,52 @@
     .cards {
       padding: torem(12) torem(18) torem(12);
       border-radius: 30px;
+    }
+  }
+
+  .container {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 22%;
+      height: 70%;
+      background-image: url("../images/dot-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      transform: translate(75%, -20%);
+
+      @include md-breakpoint {
+        display: none;
+      }
+    }
+  }
+}
+
+.section--resources {
+  .container {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20%;
+      height: 22%;
+      background-image: url("../images/dot-bg.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: -1;
+
+      @include md-breakpoint {
+        display: none;
+      }
     }
   }
 }
