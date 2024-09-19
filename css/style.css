@@ -122,6 +122,7 @@ body {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.3;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 991.98px) {
   body {
@@ -192,7 +193,6 @@ h5 {
 
 .main {
   padding-bottom: 8.25rem;
-  overflow-x: hidden;
 }
 @media screen and (max-width: 767.98px) {
   .main {
@@ -274,6 +274,112 @@ sup {
   }
 }
 
+.animation-text,
+.block-bottom {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.text__animated {
+  -webkit-animation-name: textAnimation;
+  animation-name: textAnimation;
+}
+
+@-webkit-keyframes textAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+.block-left {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.block-left__animated {
+  -webkit-animation-name: blockLeft;
+  animation-name: blockLeft;
+}
+
+.block-right {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.block-right__animated {
+  -webkit-animation-name: blockRight;
+  animation-name: blockRight;
+}
+
+@-webkit-keyframes blockRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes blockRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@-webkit-keyframes blockLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@keyframes blockLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
 .main {
   position: relative;
 }

@@ -8,6 +8,7 @@ body {
   font-size: torem(20);
   font-weight: 400;
   line-height: 1.3;
+  overflow-x: hidden;
 
   @include md-breakpoint {
     font-size: torem(16);
@@ -59,7 +60,6 @@ h5 {
 
 .main {
   padding-bottom: torem(132);
-  overflow-x: hidden;
 
   @include sm-breakpoint {
     padding-bottom: torem(36);
@@ -132,5 +132,71 @@ sup {
   @include sm-breakpoint {
     top: 0;
     font-size: torem(18);
+  }
+}
+
+.animation-text,
+.block-bottom {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.text__animated {
+  animation-name: textAnimation;
+}
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+.block-left {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+
+  &__animated {
+    animation-name: blockLeft;
+  }
+}
+
+.block-right {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+
+  &__animated {
+    animation-name: blockRight;
+  }
+}
+
+@keyframes blockRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes blockLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
