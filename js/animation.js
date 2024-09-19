@@ -33,13 +33,13 @@ const callbackRight = (entries, observer) => {
 };
 
 const options = {
-  rootMargin: "10px 0px 0px 0px",
-  threshold: 0.3,
+  rootMargin: "-20px 0px 0px 0px",
+  threshold: 0,
 };
 
 const options2 = {
-  rootMargin: "0px 0px 0px 0px",
-  threshold: 0.3,
+  rootMargin: "-20px 0px 0px 0px",
+  threshold: 0,
 };
 
 const observer = new IntersectionObserver(callback, options);
