@@ -1116,9 +1116,6 @@ sup {
   .section--recreatiion__item__text p:not(:last-child) {
     margin-bottom: 0.625rem;
   }
-  .section--recreatiion__item picture {
-    aspect-ratio: 16/9;
-  }
   .section--recreatiion__item.reverse {
     flex-direction: column-reverse;
   }
