@@ -52,7 +52,11 @@
 }
 
 .splide {
-  height: 100dvh;
+  height: 100vh;
+
+  @supports (height: 100dvh) {
+    height: 100dvh;
+  }
 
   &__track {
     height: 100%;
@@ -174,6 +178,14 @@
     @include sm-breakpoint {
       bottom: torem(20);
       gap: torem(8);
+    }
+  }
+
+  @include sm-breakpoint {
+    height: 85vh;
+
+    @supports (height: 100dvh) {
+      height: 100dvh;
     }
   }
 }

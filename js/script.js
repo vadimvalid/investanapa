@@ -1,7 +1,7 @@
 new Splide("#image-carousel", {
   type: "loop",
   interval: 4000,
-  // autoplay: true,
+  autoplay: true,
   speed: 2000,
   perMove: 1,
   rewind: true,
